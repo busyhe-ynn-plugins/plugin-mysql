@@ -1,0 +1,53 @@
+{
+    "name": "@busyhe/ynn-plugin-mysql",
+    "version": "0.0.1",
+    "description": "Ynn plugin for MySQL",
+    "main": "lib/index.js",
+    "scripts": {
+        "test": "jest --forceExit",
+        "tw": "jest --watch",
+        "test-watch": "npm run tw",
+        "test-cov": "jest --coverage --runInBand --forceExit --detectOpenHandles",
+        "lint": "eslint lib --cache --ignore-path .eslintignore",
+        "precommit-msg": "echo 'Pre-commit checks...' && exit 0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:busyhe-ynn-plugins/plugin-mysql.git"
+    },
+    "keywords": [
+        "ynn",
+        "plugin",
+        "database",
+        "mysql",
+        "db"
+    ],
+    "author": "LvChengbin <lvchengbin59@gmail.com>",
+    "bugs": {
+        "url": "https://github.com/ynnjs/ynn-plugin-mysql/issues"
+    },
+    "homepage": "https://github.com/ynnjs/ynn-plugin-mysql#readme",
+    "dependencies": {
+        "mysql2": "^2.1.0"
+    },
+    "devDependencies": {
+        "eslint": "^7.3.1",
+        "jest": "^26.1.0",
+        "pre-commit": "^1.2.2",
+        "ynn": "0.1.1"
+    },
+    "jest": {
+        "testMatch": [
+            "**/test/**/*.spec.js"
+        ],
+        "coverageReporters": [
+            "text-summary",
+            "text",
+            "lcov"
+        ],
+        "collectCoverageFrom": [
+            "lib/**/*.js"
+        ],
+        "testEnvironment": "node"
+    }
+}
